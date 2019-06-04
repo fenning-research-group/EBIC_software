@@ -1,0 +1,41 @@
+<RCC>
+  <qresource prefix="/">
+    <file>images/Arrow_OR.png</file>
+    <file>images/Arrow.png</file>
+    <file>images/pointDx.png</file>
+    <file>images/Eye_OR.png</file>
+    <file>images/Eye.png</file>
+    <file>images/checkbox.png</file>
+    <file>images/Cross.png</file>
+    <file>images/CrossOR.png</file>
+    <file>images/FFTicon.png</file>
+    <file>images/FLR.png</file>
+    <file>images/FUD.png</file>
+    <file>images/HIST_OR.png</file>
+    <file>images/HIST.png</file>
+    <file>images/LineP_OR.png</file>
+    <file>images/LineP.png</file>
+    <file>images/Mark.png</file>
+    <file>images/MarkOR.png</file>
+    <file>images/Measure.png</file>
+    <file>images/Mline.png</file>
+    <file>images/MlineOR.png</file>
+    <file>images/Quad.png</file>
+    <file>images/QuadOR.png</file>
+    <file>images/ROI_OR.png</file>
+    <file>images/ROI.png</file>
+    <file>images/Single.png</file>
+    <file>images/SingleOR.png</file>
+    <file>images/Tran.png</file>
+    <file>images/LineP.png</file>
+    <file>images/LineP_OR.png</file>
+    <file>images/ROI_OR.png</file>
+    <file>images/ROI.png</file>
+    <file>images/CrossOR.png</file>
+    <file>images/Cross.png</file>
+    <file>images/checkbox.png</file>
+  </qresource>
+  <qresource prefix="newPrefix">
+    <file>images/Mline.png</file>
+  </qresource>
+</RCC>
