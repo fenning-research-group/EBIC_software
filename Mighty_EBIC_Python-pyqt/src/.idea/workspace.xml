@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb96d0a9-e7ee-41ac-892e-c5995c2c8369" name="Default Changelist" comment="" />
+    <list default="true" id="bb96d0a9-e7ee-41ac-892e-c5995c2c8369" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exportDirFiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/exportDirFiles.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,94 +18,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qtdesigner.py">
+        <entry file="file://$PROJECT_DIR$/exportDirFiles.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8430">
-              <caret line="562" selection-start-line="562" selection-end-line="562" />
+            <state relative-caret-position="173">
+              <caret line="32" column="92" selection-start-line="32" selection-start-column="92" selection-end-line="32" selection-end-column="92" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/exportDirFiles.py">
+        <entry file="file://$PROJECT_DIR$/../../../../GitHub/APS/Sector 2/Scripts/Viewer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Mexport.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Mighty_qt_designer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6165">
-              <caret line="413" column="63" selection-start-line="413" selection-start-column="12" selection-end-line="413" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scanobject.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7875">
-              <caret line="534" selection-start-line="534" selection-end-line="534" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/miniconda3/envs/src/lib/python2.7/pickle.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20655">
-              <caret line="1383" selection-start-line="1383" selection-end-line="1383" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/miniconda3/envs/src/lib/python2.7/site-packages/matplotlib/artist.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12870">
-              <caret line="875" selection-start-line="875" selection-end-line="875" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mplwidget.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="98" column="13" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/miniconda3/envs/src/lib/python2.7/site-packages/matplotlib/figure.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18015">
-              <caret line="1238" selection-start-line="1238" selection-end-line="1238" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/miniconda3/envs/src/lib/python2.7/site-packages/matplotlib/projections/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1110">
-              <caret line="81" selection-start-line="81" selection-end-line="81" />
+            <state relative-caret-position="263">
+              <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -114,6 +43,9 @@
       <find>add_subplot</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -121,21 +53,22 @@
         <option value="$PROJECT_DIR$/mplwidget.py" />
         <option value="$PROJECT_DIR$/Mighty_qt_designer.py" />
         <option value="$PROJECT_DIR$/exportDirFiles.py" />
+        <option value="$PROJECT_DIR$/../../../../GitHub/APS/Sector 2/Scripts/Viewer.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="140" />
-    <option name="y" value="43" />
-    <option name="width" value="1400" />
-    <option name="height" value="987" />
+    <option name="x" value="26" />
+    <option name="y" value="23" />
+    <option name="width" value="1394" />
+    <option name="height" value="877" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -147,11 +80,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.project" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -182,6 +116,24 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration name="Viewer" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="src" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="$USER_HOME$/miniconda3/envs/APS/sector2DataProcessing/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../../GitHub/APS/Sector 2/Scripts" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../../GitHub/APS/Sector 2/Scripts/Viewer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python" singleton="true">
       <module name="src" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -195,24 +147,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="exportDirFiles" type="PythonConfigurationType" factoryName="Python" singleton="true" nameIsGenerated="true">
-      <module name="src" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="$USER_HOME$/miniconda3/envs/src/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="false" />
-      <option name="ADD_SOURCE_ROOTS" value="false" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exportDirFiles.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -245,10 +179,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="140" y="43" width="1400" height="987" extended-state="0" />
-    <editor active="true" />
+    <frame x="26" y="23" width="1394" height="877" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49833333" visible="true" weight="0.24945612" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49833333" visible="true" weight="0.24908958" />
       <window_info id="Structure" order="1" sideWeight="0.50166667" side_tool="true" weight="0.24945612" />
       <window_info id="Favorites" order="2" sideWeight="0.50166667" side_tool="true" weight="0.24945612" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -257,11 +190,11 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32960895" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32960895" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32866243" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3299363" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.21273886" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32960895" />
+      <window_info anchor="bottom" id="Python Console" order="10" visible="true" weight="0.32866243" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -284,6 +217,11 @@
           <url>file://$PROJECT_DIR$/Mighty_qt_designer.py</url>
           <line>403</line>
           <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../../GitHub/APS/Sector 2/Scripts/Viewer.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -421,16 +359,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scanobject.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7875">
-          <caret line="534" selection-start-line="534" selection-end-line="534" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/miniconda3/envs/src/lib/python2.7/pickle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20655">
@@ -461,15 +389,32 @@
     </entry>
     <entry file="file://$USER_HOME$/miniconda3/envs/src/lib/python2.7/site-packages/matplotlib/projections/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
+        <state relative-caret-position="410">
           <caret line="81" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scanobject.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="534" selection-start-line="534" selection-end-line="534" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exportDirFiles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        <state relative-caret-position="173">
+          <caret line="32" column="92" selection-start-line="32" selection-start-column="92" selection-end-line="32" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../GitHub/APS/Sector 2/Scripts/Viewer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>

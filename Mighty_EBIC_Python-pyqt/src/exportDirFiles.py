@@ -30,18 +30,18 @@ def export_scan2(scan,expDataPath):
 
 
 # To export files in a given directory
-outputDirs="/Volumes/GoogleDrive/My Drive/EBIC/ucla_xc/dataRaw/cho/20190602_cho26"
-rawDataPath = "/Volumes/GoogleDrive/My Drive/EBIC/ucla_xc/dataExported/cho/20190603"
-files = os.listdir(outputDirs);
+outputDirs="/Volumes/GoogleDrive/My Drive/EBIC/beamCondition/revision/ucla_troubleEBIC"
+rawDataPath = "/Volumes/GYL_USB/research/EBIC/beamCondition/revision/ucla_ref_troubleEBC"
+files = os.listdir(rawDataPath);
 counter = 1;
 for ebicfile in files:
     fileExt = '.scan'
     if fileExt in ebicfile:
-        filePath = outputDirs + '/' + ebicfile
+        filePath = rawDataPath + '/' + ebicfile
         scanFile = scanobject.scanObjectUtils.load_scanobject(filePath)
         tempname = filePath[filePath.rfind('/'):]
         scanFile.name = tempname
         counter = counter + 1;
-        export_scan2(scanFile,rawDataPath)
-        # print('finish exporting '+ ebicfile)
+        export_scan2(scanFile,outputDirs)
+        print('finish exporting '+ ebicfile)
 print('counter is',counter)

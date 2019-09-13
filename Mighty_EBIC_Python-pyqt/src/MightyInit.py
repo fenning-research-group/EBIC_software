@@ -100,7 +100,7 @@ class DesignerMainWindow(QtGui.QMainWindow, Ui_MplMainWindow):
         self.cmapList = None
         self.sockQ = None
         self.setSamplesPerPoint(1)
-        self.setDelay() 
+        self.setDelay(5*1e-8) 
 
         self.setStep(0)  #takes first index of values min is 2**8 in bits 
         self.CH = 0
@@ -195,23 +195,23 @@ class DesignerMainWindow(QtGui.QMainWindow, Ui_MplMainWindow):
 
 
         #SLOTS for setting channels 
-        QtCore.QObject.connect(self.enCh1, QtCore.SIGNAL("stateChanged(int)"), self.setMask)
-        QtCore.QObject.connect(self.enCh2, QtCore.SIGNAL("stateChanged(int)"),self.setMask)
-        QtCore.QObject.connect(self.enCh3, QtCore.SIGNAL("stateChanged(int)"), self.setMask)
-        QtCore.QObject.connect(self.enCh4, QtCore.SIGNAL("stateChanged(int)"), self.setMask)
-        QtCore.QObject.connect(self.enCh5, QtCore.SIGNAL("stateChanged(int)"), self.setMask)
-        QtCore.QObject.connect(self.enCh6, QtCore.SIGNAL("stateChanged(int)"), self.setMask)
+        #QtCore.QObject.connect(self.enCh1, QtCore.SIGNAL("stateChanged(int)"), self.setMask)
+        #QtCore.QObject.connect(self.enCh2, QtCore.SIGNAL("stateChanged(int)"),self.setMask)
+        #QtCore.QObject.connect(self.enCh3, QtCore.SIGNAL("stateChanged(int)"), self.setMask)
+        #QtCore.QObject.connect(self.enCh4, QtCore.SIGNAL("stateChanged(int)"), self.setMask)
+        #QtCore.QObject.connect(self.enCh5, QtCore.SIGNAL("stateChanged(int)"), self.setMask)
+        #QtCore.QObject.connect(self.enCh6, QtCore.SIGNAL("stateChanged(int)"), self.setMask)
 
         #slot for step size
         QtCore.QObject.connect(self.ScanSize, QtCore.SIGNAL("activated(int)"), self.setStep)
 
         #slot for changing samples per point
-        QtCore.QObject.connect(self.SamplesPerPoint, QtCore.SIGNAL("valueChanged(int)"), self.setSamplesPerPoint) 
+       # QtCore.QObject.connect(self.SamplesPerPoint, QtCore.SIGNAL("valueChanged(int)"), self.setSamplesPerPoint) 
 
         #slots for changing parameters when text is changed
-        QtCore.QObject.connect(self.Delay, QtCore.SIGNAL("textChanged(QString)"), self.setDelay) 
-        QtCore.QObject.connect(self.Mag, QtCore.SIGNAL("textChanged(QString)"), self.setMag)
-        QtCore.QObject.connect(self.dxMicrons, QtCore.SIGNAL("textChanged(QString)"), self.setDx)
+        #QtCore.QObject.connect(self.Delay, QtCore.SIGNAL("textChanged(QString)"), self.setDelay) 
+        #QtCore.QObject.connect(self.Mag, QtCore.SIGNAL("textChanged(QString)"), self.setMag)
+        #QtCore.QObject.connect(self.dxMicrons, QtCore.SIGNAL("textChanged(QString)"), self.setDx)
         #QtCore.QObject.connect(self.dyMicrons, QtCore.SIGNAL("textChanged(QString)"), self.setDy)
 
         #slot that starts a Scan using inputs defined
@@ -298,17 +298,6 @@ class DesignerMainWindow(QtGui.QMainWindow, Ui_MplMainWindow):
         QtCore.QObject.connect(self.Sel, QtCore.SIGNAL("toggled(bool)"), self.ToolTracker.set_Sel)
         QtCore.QObject.connect(self.Vis, QtCore.SIGNAL("toggled(bool)"), self.ToolTracker.set_Vis)
         #QtCore.QObject.connect(self.Vis, QtCore.SIGNAL("toggled(bool)"), self.w5.set_Vis)
-
-        # To export files in a given directory
-        # outputDirs = "/Users/graceluo/Documents/Research/EBIC_software/Mighty_EBIC_Python-pyqt/data/20181128_sm2";
-        # files = os.listdir(outputDirs);
-        # for ebicfile in files:
-        #     fileExt = '.scan'
-        #     if fileExt in ebicfile:
-        #         self.filename = ebicfile
-        #         openFile = openScan(self)
-        #         self.openScan()
-        #         self.export_scan2(self)
 
 
 
@@ -754,8 +743,7 @@ class DesignerMainWindow(QtGui.QMainWindow, Ui_MplMainWindow):
         self.channel[0] = int(value)
         print "channel :",self.channel
         self.img.setUnits(units = self.channelUnits[int(value)])
-        self.update_img()
-        self.update_mpl() 
+
 
         
     #def reverseCmap(self):
@@ -764,13 +752,8 @@ class DesignerMainWindow(QtGui.QMainWindow, Ui_MplMainWindow):
 
 
 
-    def setMask(self):
-        self.channelMask = (int(self.enCh1.isChecked()) << 0 | int(self.enCh2.isChecked()) << 1 
-                                | int(self.enCh3.isChecked()) << 2 | int(self.enCh4.isChecked()) << 3 
-                                | int(self.enCh5.isChecked()) << 4 | int(self.enCh6.isChecked()) << 5)   
-
-        print(str(bin(self.channelMask)))
-        #New for dwelltime estimate
+    def setMask(self,chmask):
+        self.channelMask=chmask
         self.ChannelCount = EbicDataManager.DataManagerUtils.maskToChannelCount(self.channelMask)
         self.update_Dwell()
 
@@ -790,18 +773,18 @@ class DesignerMainWindow(QtGui.QMainWindow, Ui_MplMainWindow):
         
     def setSamplesPerPoint(self,value):
         self.samplesPerPoint=int(value)
-        print(value)
+        # print(value)
         self.update_Dwell()
         
 
 
-    def setDelay(self):
+    def setDelay(self,delayVal):
         """
         sets delay using two shorts (fine and coarse) works in micro controller clock cylces.  
         delay is between new position and sample times
         """
-        self.delay= float(str(self.Delay.text()))
-        print "delay is ", self.delay
+        self.delay= float(delayVal)
+        # print "delay is ", self.delay
 
         #added to update dwell time
         delayFine, delayCoarse = scanobject.Scan.setDelay(self.delay)
@@ -811,13 +794,11 @@ class DesignerMainWindow(QtGui.QMainWindow, Ui_MplMainWindow):
 
 
 
-    def setMag(self):
+    def setMag(self,mag):
         """
         sets the Mag if it is not empty 
         """
-        if str(self.Mag.text()) != '':
-            self.scanMag = float(str(self.Mag.text()))
-        print "ScanMag = ", self.scanMag
+        self.scanMag=float(mag)
 
         if self.scanMag != None:
             self.scanScaleH = scanobject.Scan.scale(self.hMagScale, self.scanMag)
@@ -830,17 +811,17 @@ class DesignerMainWindow(QtGui.QMainWindow, Ui_MplMainWindow):
             self.mpl.canvas.ax.set_ybound(lower = 0, upper = self.extentV)
             self.mpl.canvas.ax.set_aspect('equal')
             self.mpl.canvas.draw()
-            self.setDx()
+            self.setDx(self.Dx)
             
 
 
 #TODO these seem like they should be apart of a tracker instead of main gui
-    def setDx(self):
+    def setDx(self,dx):
         """
         gets the value for Dx in position
         """
-        if str(self.dxMicrons.text()) != '':
-            self.Dx = float(str(self.dxMicrons.text()))
+        if dx != 0:
+            self.Dx = float(dx)
             self.Dy = self.Dx
             self.scale = self.Dx*1e-6
             print "Scale ", self.scale
@@ -928,19 +909,19 @@ class DesignerMainWindow(QtGui.QMainWindow, Ui_MplMainWindow):
         if self.scan is not None:
             pass
             #self.scan.close()
-
-        # self.scanBounds = (tuple(self.offsets), (self.offsets[0] + self.spreadH, self.offsets[1] + self.spreadV))
+    
+        self.scanBounds = (tuple(self.offsets), (self.offsets[0] + self.spreadH, self.offsets[1] + self.spreadV))
         # Get active scan settings and store them locally
-        self.takeChannelUnits()
+        #self.takeChannelUnits()
         units = self.channelUnits
 
-        self.takeChannelLabels()
+        #self.takeChannelLabels()
         labels= self.channelLabel
 
-        self.takeChannelGain()
+        #self.takeChannelGain()
         gain = self.channelGain
 
-        self.mag = str(self.Mag.text())
+        #self.mag = str(self.Mag.text())
         mag = self.mag
 
         self.beam = str(self.BeamCurrent.text())
@@ -999,7 +980,7 @@ class DesignerMainWindow(QtGui.QMainWindow, Ui_MplMainWindow):
         sock.close()
 
         #adding unitsto img
-        self.img.setUnits( units = self.channelUnits[self.channel[0]])
+        #self.img.setUnits( units = self.channelUnits[self.channel[0]])
 
         #(self, mpl, displayArray, channel, scanFlag)
         self.scan = scanUpdate.ScanUpdate(self,self.mpl,self.img, self.displayArray,self.channel, self.scanFlag, self.scanObject.displayExtent)
@@ -1042,8 +1023,7 @@ class DesignerMainWindow(QtGui.QMainWindow, Ui_MplMainWindow):
         return
 
     def update_img(self):
-        #self.scale = 1.0  #comment out to put scale with Dx
-        self.img.setImage(numpy.swapaxes(self.displayArray[0][:,:,self.channel[0]], 0,1), scale = (self.scale, self.scale))
+        self.img.setImage(numpy.swapaxes(self.displayArray[0][:,:,self.channel[0]], 0,1))
 
         return
 
@@ -1072,37 +1052,16 @@ class DesignerMainWindow(QtGui.QMainWindow, Ui_MplMainWindow):
         
         
 
-    def takeChannelUnits(self):
-
-        self.channelUnits[0]=str(self.unitsCh1.text())
-        self.channelUnits[1]=str(self.unitsCh2.text())
-        self.channelUnits[2]=str(self.unitsCh3.text())
-        self.channelUnits[3]=str(self.unitsCh4.text())
-        self.channelUnits[4]=str(self.unitsCh5.text())
-        self.channelUnits[5]=str(self.unitsCh6.text())
+    def takeChannelUnits(self,units):
+        self.channelUnits=units
 
 
-    def takeChannelGain(self):
-
-        self.channelGain[0]=str(self.gainCh1.text())
-        self.channelGain[1]=str(self.gainCh2.text())
-        self.channelGain[2]=str(self.gainCh3.text())
-        self.channelGain[3]=str(self.gainCh4.text())
-        self.channelGain[4]=str(self.gainCh5.text())
-        self.channelGain[5]=str(self.gainCh6.text())
-
-
-    def takeChannelLabels(self):
-    
-        self.channelLabel[0]=str(self.labelCh1.text())
-        self.channelLabel[1]=str(self.labelCh2.text())
-        self.channelLabel[2]=str(self.labelCh3.text())
-        self.channelLabel[3]=str(self.labelCh4.text())
-        self.channelLabel[4]=str(self.labelCh5.text())
-        self.channelLabel[5]=str(self.labelCh6.text())
-
-
-
+    def takeChannelGain(self,gains):
+        self.channelGain=gains
+        
+    def takeChannelLabels(self,labels):
+        self.channelLabel=labels
+        
     #TODO: make load function that reads in the saved data and displays those channels    
     def saveScan(self):
         #self.scanInfo=[units,labels,gain,mag,accel,beam,channel]
@@ -1112,8 +1071,8 @@ class DesignerMainWindow(QtGui.QMainWindow, Ui_MplMainWindow):
              beam = self.scanInfo[5], channel = self.scanInfo[6], vExtent = self.vExtent, hExtent = self.hExtent, vMin = self.vMin,
              hMin = self.hMax, vMax = self.vMax )
 
-    def saveScanObject(self):
-            scanobject.scanObjectUtils.pickle_scanobject(self.scanObject , '../data/' + str(self.saveName.text()) + '.scan')
+    def saveScanObject(self,fileName):
+            scanobject.scanObjectUtils.pickle_scanobject(self.scanObject , '../data/' + fileName + '.scan')
         
 
     def saveTransport(self):
@@ -1126,7 +1085,7 @@ app = QtGui.QApplication(sys.argv)
 # instantiate the main window
 poo = DesignerMainWindow()
 # show it
-poo.show()
+#poo.show()
 # start the Qt main loop execution, exiting from this script
 # with the same return code of Qt application
-sys.exit(app.exec_())
+#sys.exit(app.exec_())
